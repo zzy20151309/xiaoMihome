@@ -71,29 +71,31 @@
     }
 
 
-    #top {/*未完成*/
+    #main-nav {
         position:absolute ;
         top: 130px;
-        left: 200px;
+        left: 300px;
 
     }
-
-    #top.first li{
+    #main-nav li{
         height: 30px;
         float: left;
         margin-right: 20px;
         line-height: 30px;
     }
-    #top.first a{
+    #main-nav a{
         color: black;
-        font:italic bold 40px "宋体"
-
-
+        font:italic  30px "宋体"
     }
-   
-    #top1.second li{
-        float: none;
-    }
+    /*#main-nav .sbu-nav li{*/
+        /*float: none;*/
+        /*display: none;*/
+        /*background: #ff0000;*/
+    /*}*/
+    /*#main-nav .sbu-nav li:hover {*/
+        /*display: block;*/
+        /*background: #ff0000;*/
+    /*}*/
 
 </style>
 <div id="head"><a href="www.1.com">小米新品日</a></div>
@@ -123,10 +125,10 @@
 
 </div>
 <div>
-    <ul id="top" class="first">
+    <ul id="main-nav" >
         <li>
             <a href="">小米手机</a>
-            <ul id="top1" class="second">
+            <ul  class="sbu-nav">
                 <li><a href="">小米1</a></li>
                 <li><a href="">小米2</a></li>
                 <li><a href="">小米3</a></li>
@@ -134,8 +136,24 @@
                 <li><a href="">小米5</a></li>
             </ul>
         </li>
-        <li><a href="">红米</a></li>
-        <li><a href="">笔记本</a></li>
+        <li>
+            <a href="">红米</a>
+            <ul class="sub-nav">
+                <li><a href="">红米 1</a></li>
+                <li><a href="">红米 2</a></li>
+                <li><a href="">红米 3</a></li>
+                <li><a href="">红米 4</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">笔记本</a>
+            <ul class="sub-nav">
+                <li><a href="">笔记本 1</a></li>
+                <li><a href="">笔记本 2</a></li>
+                <li><a href="">笔记本 3</a></li>
+                <li><a href="">笔记本 4</a></li>
+            </ul>
+        </li>
         <li><a href="">电视</a></li>
         <li><a href="">盒子</a></li>
         <li><a href="">新品</a></li>
@@ -143,7 +161,8 @@
         <li><a href="">智能硬件</a></li>
         <li><a href="">服务</a></li>
         <li><a href="">社区</a></li>
-    </ul></div>
+    </ul>
+</div>
 
 </body>
 </html>
