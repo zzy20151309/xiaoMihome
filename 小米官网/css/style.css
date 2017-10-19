@@ -70,8 +70,7 @@ img {
     color: yellow;
     background: #000;
 }
-.nav .main-nav .car
-:hover .car-content{
+.nav .main-nav .car:hover .car-content{
     display: block;
 }
 
