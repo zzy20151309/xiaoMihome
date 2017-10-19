@@ -39,73 +39,84 @@
         height: 100%;
         display: block;
     }
-    
+
     #header-left {
         background: #000;
         width: 70%;
         height: 30px;
         float: left;
     }
+
     #header-left li {
         float: left;
         margin-right: 20px;
         line-height: 30px;
 
     }
-    #header-right{
+
+    #header-right {
         background: #000;
         width: 30%;
         height: 30px;
         float: right;
     }
+
     #header-right li {
         float: left;
         margin-right: 20px;
         line-height: 30px;
     }
-    #header-left a,#header-right a{
+
+    #header-left a, #header-right a {
         color: #cccccc;
     }
-    #header-left a:hover,#header-right a:hover {
+
+    #header-left a:hover, #header-right a:hover {
         color: #ffffff;
     }
 
-
     #main-nav {
-        position:absolute ;
+        position: absolute;
         top: 130px;
         left: 300px;
 
     }
-    #main-nav li{
+
+    #main-nav li {
         height: 30px;
         float: left;
         margin-right: 20px;
         line-height: 30px;
     }
-    #main-nav a{
+
+    #main-nav a {
         color: black;
-        font:italic bold 30px "宋体";
+        font: italic bold 30px "宋体";
         display: block;
 
-
     }
-    #main-nav a:hover{
-        color: #00ff00;}
-    #main-nav .sbu-nav{
-        float: none;
+
+    #main-nav a:hover {
+        color: #00ff00;
+    }
+
+    #main-nav .sbu-nav {
         display: none;
-        background: #ff0000;
+        background: #cccccc;
     }
-    #main-nav .sbu-nav:hover {
+
+    #main-nav  li:hover .sbu-nav {
         display: block;
 
+    }
+    #main-nav .sbu-nav li{
+        float:none;
     }
 
 </style>
 <div id="head"><a href="www.1.com">小米新品日</a></div>
 <div>
-    <ul id="header-left" >
+    <ul id="header-left">
         <li><a href="www.2.com">小米商城</a></li>
         <li><a href="www.3.com">MIUI</a></li>
         <li><a href="www.4.com">米聊</a></li>
@@ -130,10 +141,10 @@
 
 </div>
 <div>
-    <ul id="main-nav" >
+    <ul id="main-nav">
         <li>
             <a href="">小米手机</a>
-            <ul  class="sbu-nav">
+            <ul class="sbu-nav">
                 <li><a href="">小米1</a></li>
                 <li><a href="">小米2</a></li>
                 <li><a href="">小米3</a></li>
@@ -143,7 +154,7 @@
         </li>
         <li>
             <a href="">红米</a>
-            <ul class="sub-nav">
+            <ul class="sbu-nav">
                 <li><a href="">红米 1</a></li>
                 <li><a href="">红米 2</a></li>
                 <li><a href="">红米 3</a></li>
@@ -152,7 +163,7 @@
         </li>
         <li>
             <a href="">笔记本</a>
-            <ul class="sub-nav">
+            <ul class="sbu-nav">
                 <li><a href="">笔记本 1</a></li>
                 <li><a href="">笔记本 2</a></li>
                 <li><a href="">笔记本 3</a></li>
