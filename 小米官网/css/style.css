@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    list-style: none;
+}
+a {
+    text-decoration: none; /*下划线取消*/
+}
+img {
+    border: 0;
+}
+.wrapper{
+    margin: 0 auto;
+    width: 1226px;
+}
+
+
+.nav{
+    background: #333 ;
+    height: 40px;
+}
+.nav .wrapper a:hover{
+    color: #ffffff;
+}
+.user-info {
+    float: right;
+}
+.main-nav li{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+}
+.main-nav li a{
+    color: #b0b0b0;
+    font-size:12px;
+}
+.main-nav li span{
+    margin:0 5px;
+    color: #424242;
+}
+/*购物车部分*/
+.nav .main-nav .car {
+    background: #ffccff;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+}
+.nav .main-nav .car a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.nav .main-nav .car i{
+    font-size: 1px;
+}
+.nav .main-nav .car .car-content{
+    width: 200px;
+    height: 600px;
+    background: #cccccc;
+    display: none;
+
+}
+.nav .main-nav .car .car-content li{
+    float: none;
+}
+
+.nav .main-nav .car  a:hover{
+    color: yellow;
+    background: #000;
+}
+.nav .main-nav .car
+:hover .car-content{
+    display: block;
+}
+
+
+
+
+
+
