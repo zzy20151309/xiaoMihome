@@ -84,13 +84,72 @@ img {
 
 /*购物车结束*/
 /*二级水平菜单开始*/
+.sub-nav{
+    position: relative;
+}
+.sub-nav .header{
+    height: 100px;
+    /*background: #00ff00;     !*注释掉就ok*!*/
 
-.mi-logo{
+}
+.sub-nav .header div{
+    float: left;
+}
+
+.sub-nav .left{
+    width: 62px;
+    margin-top: 22px;
+}
+.mi-logo {
     width: 55px;
     height: 55px;
     background:#ff6700 url("../img/mi-logo.png") no-repeat center center;
 }
 
-
+/*left结束*/
+/*center开始*/
+.sub-nav .center{
+    width: 850px;
+    margin-top:42px;
+    margin-left:180px;
+}
+.sub-nav .center .menu-item a{
+    color:#333333;
+    font-size:16px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding:0 10px;
+}
+.sub-nav .center .menu-item{
+    float: left;
+    height: 60px;
+}
+.sub-nav .center .menu-item a:hover{
+    color: #ff6700;
+}
+.menu-{
+    width: 100%;
+    height: 0px;
+    background: blue;
+    display: none;
+    position: absolute;
+    top:100px;
+    left:0px;
+    overflow: hidden;
+}
+.menu-a{
+    float: left;
+}
+.center .menu-item:hover .menu-{
+    display: block;
+/*}*/
+/*.menu-{*/
+    animation:menu 0.5s ease-in 0s forwards;/*动画效果 1名字2运行时间3动画效果4运行时间5循环模式*/
+}
+@keyframes menu /*控制动画*/{
+    100%{
+        height: 100px;}
+}
 
 
