@@ -42,10 +42,11 @@ img {
 }
 /*购物车部分*/
 .nav .main-nav .car {
-    background: #ffccff;
+    background: #424242;
     width: 120px;
     height: 40px;
     text-align: center;
+    position: relative;
 }
 .nav .main-nav .car a{
     display: block;
@@ -56,25 +57,39 @@ img {
     font-size: 1px;
 }
 .nav .main-nav .car .car-content{
-    width: 200px;
-    height: 600px;
-    background: #cccccc;
+    width: 300px;
+    height: 0px;
+    font-size: 12px;
+    line-height:100px;
+    position: absolute;
+    right:0px;
+    top: 40px;
+    box-shadow: 0px 2px 5px 3px rgba(0,0,0,0.1);/*边框样式   1水平2垂直3模糊度4延伸5颜色*/
     display: none;
+    overflow: hidden;
 
 }
-.nav .main-nav .car .car-content li{
-    float: none;
-}
-
-.nav .main-nav .car  a:hover{
-    color: yellow;
-    background: #000;
+.nav .main-nav .car:hover a{
+    color:#ff6700;
+    background:#ffffff;
 }
 .nav .main-nav .car:hover .car-content{
     display: block;
+    animation:show 0.5s ease-in 0s forwards;/*动画效果 1名字2运行时间3动画效果4运行时间5循环模式*/
+}
+@keyframes show /*控制动画*/{
+    100%{
+        height: 100px;}
 }
 
+/*购物车结束*/
+/*二级水平菜单开始*/
 
+.mi-logo{
+    width: 55px;
+    height: 55px;
+    background:#ff6700 url("../img/mi-logo.png") no-repeat center center;
+}
 
 
 
