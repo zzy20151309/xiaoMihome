@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    在函数中,var定义的变量是局部变量，函数外无法访问；
+    //    访问对象内的属性:对象.变量名
+    //    js中/结果不一定是整数；
+    //    在比较运算还有逻辑运算中：null，undefined,0相当于false
+    //    变量名首字母只能是：字母/下划线/$
+
+      function isLeap(year) {
+          if((year%4==0&&year%100!=0)||year%400==0){
+              return true;
+          }
+          return false;
+      }
+      var now=new Date();
+      var result=isLeap(now.getFullYear())
+</script>
+
+</body>
+</html>
