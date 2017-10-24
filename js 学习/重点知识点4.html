@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var person=new Object();//new 创建对象
+    person.name="lisi";//创建属性
+    person.age=23;
+    person.sex="男";
+    person.sayHello=function () {//创建方法
+        alert("我的名字是"+this.name+",hello!");//this表示对当前对象的引用，只能出现在对象的方法中
+    };
+   person.sayHello();//调用方法
+
+  /* //简写
+    var person={
+        name:"lisi",
+        age:23,
+        sex:"男",
+        sayHello:function() {
+            alert("我的名字是"+this.name+",hello!");
+        }
+    };
+    person.sayHello();*/
+
+</script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+/*    //实验一   客户输入一个数，返回星期几
+    var number=prompt("请输入数字");//读取客户输入的内容
+    number=parseInt(number);//将number解析成整形
+//    number=number*1;//(小窍门，转换成整形.内容同上)
+    switch (number){
+        case  1:
+            alert("星期一");
+            break;
+        case  2:
+            alert("星期二");
+            break;
+    }*/
+
+
+/*
+//    实验二     求n！
+    var n=prompt("输入一个数n，求n！");
+    function factorial(n) {
+        if(n<=1){return 1;}
+        return factorial(n-1)*n;//存在解析，故不需要单独解析
+    }
+    console.log( factorial(n) );
+*/
+
+
+/*
+    //实验三    求1！+2！...+n！
+    var n=prompt("输入n");
+    var sum=0;
+    function factorial(i) {
+       if(i<=1){return 1;}
+       return factorial(i-1)*i;
+    }
+    for(i=1;i<=n;i++){
+        sum+=factorial(i);
+    }
+    console.log( sum );*/
+
+
+/*  //实验四   有一个三位数x，被4除余2，被7除余3，被9除余5，求这个数
+    for(var i=100;i<=999;i++){
+        if(i%4==2 && i%7==3 && i%9==5){
+            console.log(i);
+        }
+    }*/
+
+
+/*//实验五    求所有满足条件的四位数ABCD，它是13的倍数，且第3位数加上第2位数等于第4位数（即：A=B+C）。
+    //（提示：对于四位数的整数x，通过Math.floor(x/1000)可求出第4位的数字，其他位数的提取也类似）
+         for(var i=1000; i<=9999;i++){
+             var fourth=Math.floor(i/1000)  ;
+             var third=Math.floor(i%1000/100);
+             var second=Math.floor(i%100/10);
+             if(i%13==0 && fourth==third+second){
+                 console.log(i);
+             }
+         }*/
+
+
+/* //实验六       斐波纳契（Fibonacci）数列的第一项是1，第二项是1，以后各项都是前两项的和。
+    //            试用递归函数和非递归函数各编写一个程序，求斐波纳契数列第N项的值。
+        //①递归
+         function fibonacci(n) {
+             if(n<=2){
+                 return 1;
+             }
+             return fibonacci(n-1) + fibonacci(n-2);
+         }
+         console.log(  fibonacci(5)  );*/
+
+
+/*    //实验七  9.利用全局变量和函数，设计模拟幸运数字机游戏。设幸运数字为8，
+      // 每次由计算机随机产生3个1-9之间(包括1和9）的随机数，当这3个随机数中有一个数字为8时，就算赢了一次，要求利用函数计算获胜率。
+   var playTime=10;
+   var winTime=0;
+   function play() {
+       for(var i=0;i<3;i++){
+           var rand=Math.ceil(Math.random()*8)+1;
+           if(rand==8){
+               return true;
+           }
+       }
+       return false;
+   }
+   for (var i=0;i<playTime;i++){
+       if(play()==true){
+           winTime++;
+       }
+   }
+   console.log(winTime /playTime *100+"%");*/
+
+
+/*//4.编制一个从字符串中收集数字字符（"0"',"1"，…"9"）的函数CollectDigits(s)，它从字符串s中顺序取出数字，
+// 并且合并为一个独立的字符串作为函数的返回值。例如函数调用CollectDigits("1abc23def4"）的返回值是字符串"1234"。
+    function collectDigits(str) {
+        var digits="";
+        for(var i=0;i<str.length;i++){
+            var char =str.charAt(i);//typeof char=="number"->typeof:类型查询
+            if(!isNaN(char)){
+                digits+=char;
+            }
+        }
+        return digits;
+    }
+    console.log(collectDigits("1abc23def4"))*/
+
+//5.编制一个将两个字符串交叉合并的函数Merge(s1,s2)，例如Merge("123","abc"）的返回结果是"1a2b3c"，
+// 如果两个字符串的长度不同，那么就将多余部分直接合并到结果字符串的末尾，如Merge("123456",''abc''）的返回结果是”1a2b3c456”。
+
+    function merge(str1,str2) {
+        //var len=str1.length<str2.length?str1.length:str2.length;
+        var len,maxStr;
+        if(str1.length<str2.length){
+            len=str1.length;
+            maxStr=str2;
+        }else{
+            len=str2.length;
+            maxStr=str1;
+        }
+        var str="";
+        for(var i=0;i<len;i++){
+            str+=str1.charAt(i)+str2.charAt(i);
+        }
+        return str+maxStr.substr(len);
+    }
+    console.log(merge("123456","abc" ));
+</script>
+</body>
+</html>
