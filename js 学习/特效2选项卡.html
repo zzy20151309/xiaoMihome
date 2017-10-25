@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul, ol {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none; /*下划线取消*/
+    }
+
+    img {
+        border: 0;
+    }
+    #container{
+        width: 400px;
+        height: 200px;
+        margin: 50px auto;
+    }
+    #tab{
+        height:25px;
+        border-bottom: 1px solid #000000;
+    }
+    #tab li{
+        width: 120px;
+        height: 25px;
+        float: left;
+        background: #cccccc;
+        margin-right:5px;
+    }
+    #content{
+        height: 174px;
+        background: #cccccc;
+    }
+    #tab .selected{
+        background: #000;
+        color: #ffffff;
+    }
+    #content div{
+        display: none;
+    }
+    #content .selected{
+        display: block;
+    }
+</style>
+<body>
+  <div id="container">
+      <ul id="tab">
+          <li class="selected">html</li>
+          <li>css</li>
+          <li>javascript</li>
+      </ul>
+      <div id="content">
+          <div class="selected">001</div>
+          <div>002</div>
+          <div>003</div>
+      </div>
+  </div>
+
+  <script>
+      var oTab =document.getElementById("tab");
+      var aLi =oTab.getElementsByTagName("li");
+      var oContent= document.getElementById("content");
+      var aDiv =oContent.getElementsByTagName("div");
+
+      for(var i=0;i<aLi.length;i++){
+            aLi[i].index=i;
+        aLi[i].onclick=function () {
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].className="";
+                aDiv[i].className="";
+            }
+            this.className="selected";
+            aDiv[this.index].className="selected";
+        }//边框圆角border-radius
+      }
+  </script>
+</body>
+</html>
