@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul, ol {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    #menu{
+        width: 300px;
+        border: 1px solid #000000;
+    }
+    #menu h3{
+        background: #000;
+        color: #ffffff;
+    }
+    #menu .sub-menu{
+        display: none;
+    }
+</style>
+<body>
+<ul id="menu">
+    <li><h3>管理区</h3>
+        <ul class="sub-menu">
+            <li>001</li>
+            <li>002</li>
+            <li>003</li>
+        </ul>
+
+    </li>
+    <li><h3>交流区</h3>
+        <ul class="sub-menu">
+            <li>001</li>
+            <li>002</li>
+            <li>003</li>
+        </ul>
+    </li>
+</ul>
+<script>
+
+    var oMenu = document.getElementById("menu");//1.获取最外层的menu对象
+    var aH3 = oMenu.getElementsByTagName("h3");//2.获取menu下的所有的h3对象
+    var aUl = oMenu.getElementsByTagName("ul");//3.获取menu下的所有的submenu
+    for(var i=0;i<aH3.length;i++){//4.为所有的h3元素绑定点击事件
+        aH3[i].index=i;//5.为每一个h3元素都添加一个自定义属性
+        aH3[i].onclick = function () {
+            var oUl=aUl[this.index];//6.通过index属性获取对应的sub-menu对象
+            if(oUl.style.display=="block"){
+                oUl.style.display="none";
+            }else{
+                oUl.style.display="block";
+            }
+
+            //alert( this.innerHTML )  ;//innerHTML:
+            /*this.nextSibling.style.display="block";//①兼容性问题*/
+
+        };
+    }
+</script>
+</body>
+</html>
