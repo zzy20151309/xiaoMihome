@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul, ol {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none; /*下划线取消*/
+    }
+
+    img {
+        border: 0;
+    }
+    #container{
+        height: 342px;
+        width: 500px;
+        /*border: 1px solid #000000;*/
+        overflow: hidden;
+        margin: 50px auto;
+        position: relative;
+    }
+    #tab{
+        position: absolute;
+        right: 20px;
+        bottom:10px;
+    }
+    #tab li{
+        height: 20px;
+        width: 20px;
+        background: #000;
+        color: #ffffff;
+        float: left;
+        margin-right: 5px;
+        text-align: center;
+        line-height: 20px;
+        cursor: pointer;
+    }
+    #content img{
+        display: none;
+        height: 342px;
+        width: 500px;
+    }
+    #content .selected{
+        display: block;
+    }
+    #tab .selected{
+        background:#ffff00;
+        color: #ffffff;
+
+    }
+    #arrow{
+        position: absolute;
+        left: 20px;
+        bottom:20px;
+    }
+    #arrow span{
+        width: 20px;
+        height: 20px;
+        background: #000;
+        color: #ffffff;
+        float: left;
+        margin-right: 5px;
+        text-align: center;
+        line-height: 20px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+<div id="container">
+    <ul id="tab">
+        <li class="selected">1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <div id="content">
+        <img src="1.jpg" alt="" class="selected" >
+        <img src="2.jpg" alt="" >
+        <img src="3.jpg" alt="" >
+    </div>
+    <div id="arrow">
+        <span id="prev">&lt</span>
+        <span id="next">&gt</span>
+    </div>
+</div>
+    <script>
+        var oTab=document.getElementById("tab");
+        var aLi=oTab.getElementsByTagName("li");
+        var oContent=document.getElementById("content");
+        var aImg=oContent.getElementsByTagName("img");
+        var oNext=document.getElementById("next");
+        var oPrev=document.getElementById("prev");
+        var iIndex=0;
+
+        for(var i=0;i<aLi.length;i++){
+            aLi[i].index=i;
+            aLi[i].onmouseover=function () {
+                iIndex=this.index;
+                changeImg(this.index)
+            };
+        }
+
+
+        function changeImg (idx) {
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].className="";
+                aImg[i].className="";
+            }
+            aLi[idx].className="selected";
+            aImg[idx].className="selected";
+        }//封装函数
+
+        oNext.onclick=function () {
+            iIndex++;
+            if(iIndex==aLi.length){
+                iIndex=0;
+            }
+            changeImg(iIndex)
+        };
+        oPrev.onclick=function () {
+            iIndex--;
+            if(iIndex==-1){
+                iIndex=aLi.length-1;
+            }
+            changeImg(iIndex)
+        };
+        setInterval(function () {oNext.onclick()},2000);
+    </script>
+</body>
+</html>
