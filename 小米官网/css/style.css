@@ -67,6 +67,7 @@ img {
     box-shadow: 0px 2px 5px 3px rgba(0,0,0,0.1);/*边框样式   1水平2垂直3模糊度4延伸5颜色*/
     display: none;
     overflow: hidden;
+    z-index: 1;
 
 }
 .nav .main-nav .car:hover a{
@@ -109,9 +110,9 @@ img {
 /*left结束*/
 /*center开始*/
 .sub-nav .center{
-    width: 850px;
+    width: 700px;
     margin-top:42px;
-    margin-left:180px;
+    margin-left:150px;
 }
 .sub-nav .center .menu-item a{
     color:#333333;
@@ -131,25 +132,220 @@ img {
 .menu-{
     width: 100%;
     height: 0px;
-    background: blue;
+    background: #ffffff;
     display: none;
     position: absolute;
     top:100px;
     left:0px;
     overflow: hidden;
+    z-index: 1;
+    box-shadow: 0px 2px 5px 3px rgba(0,0,0,0.1);/*边框样式   1水平2垂直3模糊度4延伸5颜色*/
 }
 .menu-a{
+    width: 204px;
     float: left;
+    text-align: center;
+}
+.menu-a a{
+    width: 160px;
+    height: 110px;
 }
 .center .menu-item:hover .menu-{
     display: block;
 /*}*/
 /*.menu-{*/
-    animation:menu 0.5s ease-in 0s forwards;/*动画效果 1名字2运行时间3动画效果4运行时间5循环模式*/
+    animation:menu 0.3s ease-in 0s forwards;/*动画效果 1名字2运行时间3动画效果4运行时间5循环模式*/
 }
 @keyframes menu /*控制动画*/{
     100%{
-        height: 100px;}
+        height: 160px;}
+}
+.menu-a img{
+    height: 110px;
+    width:160px;
+}
+.main-a p{
+    width: 160px;
+    height: 20px;
+}
+.main-a span{
+    margin: 0 5px;
+    color: black;
+}
+/*弹出层部分*/
+#mask{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /*background: rgba(0,0,0,0.3);*/
+    background: #000000;
+    opacity: 0.3;
+    filter: alpha(opacity: 30);
+    display: none;
+}
+#dialog{
+    width: 500px;
+    height: 400px;
+    background: #ffffff;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -200px;
+    top: 50%;
+    margin-top: -150px;
+    display: none;
+}
+#dialog .header{
+    height: 50px;
+    background: #eeeeee;
+    line-height: 50px;
+}
+#dialog .close{
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/*搜索*/
+.search{
+    height: 100px;
+    width: 300px;
+    line-height:100px;
+}
+.search input{
+    height: 50px;
+    width: 245px;
 }
 
 
+/*结束*/
+#site-footer{
+    width: 1264px;
+    height: 242px;
+}
+#d30-container{
+    width: 1226px;
+    height: 242px;
+    margin: 0 auto;
+}
+.footer-service{
+    width: 1226px;
+    height: 80px;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid #a8a8a8;
+}
+.footer-service ul{
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*margin-top: -20px;*/
+}
+.footer-service ul li{
+    float: left;
+    width: 240px;
+    height: 25px;
+    padding-top: 25px;
+    font-weight: bolder;
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*margin-top: -20px;*/
+}
+.footer-service ul li a{
+    line-height: 25px;
+    display: block;
+    border-right: 1px solid #79777c;
+}
+.footer-links{
+    width: 1226px;
+    height: 152px;
+    line-height: 20px;
+}
+.footer-links dt{
+    width: 160px;
+    height: 18px;
+    padding-bottom: 15px;
+}
+.footer-links dd{
+    font-size: 13px;
+    margin-top: 12px;
+}
+.footer-links dl{
+    width: 160px;
+    height: 125px;
+    float: left;
+}
+.footer-links #col-links{
+    width: 160px;
+    text-align: center;
+}
+.footer-links #col-links #p1{
+    font-size: 20px;
+    width: 160px;
+    height: 30px;
+    color: red;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.footer-links #col-links button{
+    width: 120px;
+    height: 30px;
+    font-size: 13px;
+    color: red;
+    cursor: pointer;
+    background: white;
+    border: 1px solid red;
+}
+#site-info{
+    width: 1264px;
+    height: 166px;
+    position: relative;
+    background: #f2f2f2;
+}
+#d31-container{
+    width: 1226px;
+    height: 57px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    margin-left: -613px;
+}
+
+#mi-logo{
+    width: 57px;
+    height: 57px;
+    background: url("../img/mi-logo.png") #ff5d04 no-repeat center center;
+    float: left;
+}
+#info-text{
+    width: 770px;
+    height: 57px;
+    float: left;
+    margin-left: 10px;
+}
+#info-text #sites{
+    width: 770px;
+    font-size: 12px;
+    font-weight: 600;
+}
+#info-text p{
+    width: 600px;
+    font-size: 12px;
+}
+#info-links{
+    width: 358px;
+    height: 28px;
+    float: left;
+    margin-left: 30px;
+}
+#slogan{
+    clear: both;
+    margin: 80px auto 0;
+    width: 267px;
+    height: 19px;
+    background: url(../img/小米70.png) no-repeat center 0;
+}
